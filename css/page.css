@@ -258,6 +258,7 @@
 
 .sg-section {
     margin-bottom: var(--space-xl);
+    scroll-margin-top: 6rem;
 }
 
 .sg-section>h3 {

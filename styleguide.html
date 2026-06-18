@@ -14,7 +14,7 @@
 
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="header-bar" role="banner">
+    <header class="header-bar">
         <h1>mark</h1>
         <nav class="nav-text" aria-label="Main navigation">
             <a href="index.html" class="nav-link">← Back to Website</a>
@@ -25,7 +25,7 @@
         </nav>
     </header>
 
-    <main id="main-content" role="main">
+    <main id="main-content">
 
         <div class="sg-hero">
             <span class="section-label">// documentation</span>
@@ -85,15 +85,15 @@
                     <p class="sg-label">CSS selector:</p>
                     <p>.tag</p>
                     <p class="sg-label">Sample code:</p>
-                    <pre class="code-block">&lt;span class="tag"&gt;Unity&lt;/span&gt;
-&lt;span class="tag"&gt;C#&lt;/span&gt;
-&lt;span class="tag"&gt;Level Design&lt;/span&gt;</pre>
+                    <pre class="code-block">&lt;li class="tag"&gt;Unity&lt;/li&gt;
+&lt;li class="tag"&gt;C#&lt;/li&gt;
+&lt;li class="tag"&gt;Level Design&lt;/li&gt;</pre>
                     <p class="sg-label">Rendered element:</p>
-                    <div aria-label="Example tags">
-                        <span class="tag">Unity</span>
-                        <span class="tag">C#</span>
-                        <span class="tag">Level Design</span>
-                    </div>
+                    <ul class="project-card-tags" aria-label="Example tags">
+                        <li class="tag">Unity</li>
+                        <li class="tag">C#</li>
+                        <li class="tag">Level Design</li>
+                    </ul>
                 </section>
 
             </section>
@@ -194,7 +194,7 @@
                     <p class="sg-label">CSS selector:</p>
                     <p>.header-bar, .nav-text, .nav-link</p>
                     <p class="sg-label">Sample code:</p>
-                    <pre class="code-block">&lt;header class="header-bar" role="banner"&gt;
+                    <pre class="code-block">&lt;header class="header-bar"&gt;
     &lt;h1&gt;mark&lt;/h1&gt;
     &lt;nav class="nav-text" aria-label="Main navigation"&gt;
         &lt;a href="index.html" class="nav-link"&gt;home&lt;/a&gt;
@@ -204,7 +204,7 @@
     &lt;/nav&gt;
 &lt;/header&gt;</pre>
                     <p class="sg-label">Rendered element:</p>
-                    <header class="header-bar sg-nav-demo" role="banner">
+                    <header class="header-bar sg-nav-demo">
                         <h1>mark</h1>
                         <nav class="nav-text" aria-label="Style guide nav demo">
                             <a href="#" class="nav-link">home</a>
@@ -459,7 +459,7 @@
 
     </main>
 
-    <footer class="footer-bar" role="contentinfo">
+    <footer class="footer-bar">
         <div class="footer-company">
             <h3>mark_</h3>
             <p>Designer. Developer. Game maker.</p>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Guide — Mark</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/page.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="header-bar" role="banner">
+        <h1>mark</h1>
+        <nav class="nav-text" aria-label="Main navigation">
+            <a href="index.html" class="nav-link">← Back to Website</a>
+            <a href="#interactive" class="nav-link">Interactive</a>
+            <a href="#text" class="nav-link">Text</a>
+            <a href="#combined" class="nav-link">Combined</a>
+            <a href="#branding" class="nav-link">Branding</a>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+
+        <div class="sg-hero">
+            <span class="section-label">// documentation</span>
+            <h2>Style Guide</h2>
+            <p class="sg-hero-desc">
+                Visual and interactive language for my portfolio. This guide defines the
+                colour palette, typography, components, and ethos behind the design choices.
+            </p>
+        </div>
+
+        <div class="sg-body">
+
+            <!-- ==========================================
+                     INTERACTIVE ELEMENTS
+                     ========================================== -->
+            <section class="sg-section" id="interactive" aria-labelledby="sg-interactive-heading">
+                <h2 id="sg-interactive-heading">Interactive Elements</h2>
+
+                <section class="sg-element" aria-labelledby="sg-textlink-heading">
+                    <h3 id="sg-textlink-heading">In-text Link</h3>
+                    <p class="sg-label">CSS selector:</p>
+                    <p>.text-link</p>
+                    <p class="sg-label">Sample code:</p>
+                    <pre
+                        class="code-block">&lt;p&gt;I built the mechanics for &lt;a class="text-link" href="#"&gt;Not Seeing Is A Flower&lt;/a&gt; using C# in Unity.&lt;/p&gt;</pre>
+                    <p class="sg-label">Rendered element:</p>
+                    <p>I built the mechanics for <a class="text-link" href="#">Not Seeing Is A Flower</a> using C# in
+                        Unity.</p>
+                </section>
+
+                <section class="sg-element" aria-labelledby="sg-navlink-heading">
+                    <h3 id="sg-navlink-heading">Navigation Link</h3>
+                    <p class="sg-label">CSS selector:</p>
+                    <p>.nav-link</p>
+                    <p class="sg-label">Sample code:</p>
+                    <pre class="code-block">&lt;a class="nav-link" href="#"&gt;projects&lt;/a&gt;</pre>
+                    <p class="sg-label">Rendered element:</p>
+                    <a class="nav-link" href="#">projects</a>
+                </section>
+
+                <section class="sg-element" aria-labelledby="sg-buttons-heading">
+                    <h3 id="sg-buttons-heading">Buttons</h3>
+                    <p class="sg-label">CSS selector:</p>
+                    <p>.btn-submit, .btn-outline</p>
+                    <p class="sg-label">Sample code:</p>
+                    <pre class="code-block">&lt;button class="btn-submit" type="button"&gt;View Project&lt;/button&gt;
+&lt;a class="btn-outline" href="#"&gt;GitHub ↗&lt;/a&gt;</pre>
+                    <p class="sg-label">Rendered element:</p>
+                    <div class="sg-btn-demo">
+                        <button class="btn-submit" type="button">View Project</button>
+                        <a class="btn-outline" href="#">GitHub ↗</a>
+                    </div>
+                </section>
+
+                <section class="sg-element" aria-labelledby="sg-tag-heading">
+                    <h3 id="sg-tag-heading">Tag / Badge</h3>
+                    <p class="sg-label">CSS selector:</p>
+                    <p>.tag</p>
+                    <p class="sg-label">Sample code:</p>
+                    <pre class="code-block">&lt;span class="tag"&gt;Unity&lt;/span&gt;
+&lt;span class="tag"&gt;C#&lt;/span&gt;
+&lt;span class="tag"&gt;Level Design&lt;/span&gt;</pre>
+                    <p class="sg-label">Rendered element:</p>
+                    <div aria-label="Example tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Level Design</span>
+                    </div>
+                </section>
+
+            </section>
+
+
+            <!-- ==========================================
+                     TEXT ELEMENTS
+                     ========================================== -->
+            <section class="sg-section" id="text" aria-labelledby="sg-text-heading">
+                <h2 id="sg-text-heading">Text Elements</h2>
+
+                <section class="sg-element" aria-labelledby="sg-headings-heading">
+                    <h3 id="sg-headings-heading">4 Levels of Headings</h3>
+                    <p class="sg-label">CSS selector:</p>
+                    <p>h1, h2, h3, h4 — font-family: Source Code Pro (monospace)</p>
+                    <p class="sg-label">Sample code:</p>
+                    <pre class="code-block">&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;</pre>
+                    <p class="sg-label">Rendered element:</p>
+                    <h1>Heading 1</h1>
+                    <h2>Heading 2</h2>
+                    <h3>Heading 3</h3>
+                    <h4>Heading 4</h4>
+                </section>
+
+                <section class="sg-element" aria-labelledby="sg-paragraph-heading">
+                    <h3 id="sg-paragraph-heading">Paragraph</h3>
+                    <p class="sg-label">CSS selector:</p>
+                    <p>p — font-family: Inter (sans-serif)</p>
+                    <p class="sg-label">Sample code:</p>
+                    <pre
+                        class="code-block">&lt;p&gt;Playtesting revealed that enemy AI pathing had gaps that allowed for difficult speedrun strategies. I chose to keep them in — they were hard enough to pull off that they rewarded skilled players without breaking the experience.&lt;/p&gt;</pre>
+                    <p class="sg-label">Rendered element:</p>
+                    <p>Playtesting revealed that enemy AI pathing had gaps that allowed for difficult speedrun
+                        strategies. I chose to keep them in — they were hard enough to pull off that they rewarded
+                        skilled players without breaking the experience.</p>
+                </section>
+
+                <section class="sg-element" aria-labelledby="sg-sectionlabel-heading">
+                    <h3 id="sg-sectionlabel-heading">Section Label</h3>
+                    <p class="sg-label">CSS selector:</p>
+                    <p>.section-label</p>
+                    <p class="sg-label">Sample code:</p>
+                    <pre class="code-block">&lt;span class="section-label"&gt;// projects&lt;/span&gt;</pre>
+                    <p class="sg-label">Rendered element:</p>
+                    <span class="section-label">// projects</span>
+                </section>
+
+                <section class="sg-element" aria-labelledby="sg-callout-heading">
+                    <h3 id="sg-callout-heading">Callout / Pull Quote</h3>
+                    <p class="sg-label">CSS selector:</p>
+                    <p>.callout</p>
+                    <p class="sg-label">Sample code:</p>
+                    <pre class="code-block">&lt;blockquote class="callout"&gt;
+    Strong interactive design depends on iteration, testing,
+    and clear communication — not just polished features.
+&lt;/blockquote&gt;</pre>
+                    <p class="sg-label">Rendered element:</p>
+                    <blockquote class="callout">
+                        Strong interactive design depends on iteration, testing, and clear communication — not just
+                        polished features.
+                    </blockquote>
+                </section>
+
+                <section class="sg-element" aria-labelledby="sg-skillist-heading">
+                    <h3 id="sg-skillist-heading">Skill List</h3>
+                    <p class="sg-label">CSS selector:</p>
+                    <p>.skill-list, .skill-list li</p>
+                    <p class="sg-label">Sample code:</p>
+                    <pre class="code-block">&lt;ul class="skill-list"&gt;
+    &lt;li&gt;Unity&lt;/li&gt;
+    &lt;li&gt;C#&lt;/li&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                    <p class="sg-label">Rendered element:</p>
+                    <ul class="skill-list">
+                        <li>Unity</li>
+                        <li>C#</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </section>
+
+            </section>
+
+
+            <!-- ==========================================
+                     COMBINED ELEMENTS
+                     ========================================== -->
+            <section class="sg-section" id="combined" aria-labelledby="sg-combined-heading">
+                <h2 id="sg-combined-heading">Combined Elements</h2>
+
+                <section class="sg-element" aria-labelledby="sg-mainnav-heading">
+                    <h3 id="sg-mainnav-heading">Main Navigation</h3>
+                    <p class="sg-label">CSS selector:</p>
+                    <p>.header-bar, .nav-text, .nav-link</p>
+                    <p class="sg-label">Sample code:</p>
+                    <pre class="code-block">&lt;header class="header-bar" role="banner"&gt;
+    &lt;h1&gt;mark&lt;/h1&gt;
+    &lt;nav class="nav-text" aria-label="Main navigation"&gt;
+        &lt;a href="index.html" class="nav-link"&gt;home&lt;/a&gt;
+        &lt;a href="index.html#projects" class="nav-link"&gt;projects&lt;/a&gt;
+        &lt;a href="styleguide.html" class="nav-link"&gt;style guide&lt;/a&gt;
+        &lt;a href="https://github.com/" class="nav-link"&gt;github ↗&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;</pre>
+                    <p class="sg-label">Rendered element:</p>
+                    <header class="header-bar sg-nav-demo" role="banner">
+                        <h1>mark</h1>
+                        <nav class="nav-text" aria-label="Style guide nav demo">
+                            <a href="#" class="nav-link">home</a>
+                            <a href="#" class="nav-link">projects</a>
+                            <a href="#" class="nav-link">style guide</a>
+                            <a href="#" class="nav-link">github ↗</a>
+                        </nav>
+                    </header>
+                </section>
+
+                <section class="sg-element" aria-labelledby="sg-projectcard-heading">
+                    <h3 id="sg-projectcard-heading">Project Card</h3>
+                    <p class="sg-label">CSS selector:</p>
+                    <p>.project-card, .project-card-img, .project-card-body, .tag</p>
+                    <p class="sg-label">Sample code:</p>
+                    <pre class="code-block">&lt;article class="project-card" aria-labelledby="card-title"&gt;
+    &lt;div class="project-card-img"&gt;
+        &lt;img src="img/nsiaf-cover.jpg" alt="NSIAF title screen"&gt;
+    &lt;/div&gt;
+    &lt;div class="project-card-body"&gt;
+        &lt;span class="tag"&gt;Unity&lt;/span&gt;
+        &lt;span class="tag"&gt;C#&lt;/span&gt;
+        &lt;h3 id="card-title"&gt;Not Seeing Is A Flower&lt;/h3&gt;
+        &lt;p&gt;A 2D platformer with visual novel elements.&lt;/p&gt;
+        &lt;a href="project-nsiaf.html" class="btn-submit"&gt;View Project →&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/article&gt;</pre>
+                    <p class="sg-label">Rendered element:</p>
+                    <article class="project-card sg-card-demo" aria-labelledby="sg-demo-card-title">
+                        <div class="project-card-img">
+                            <div class="img-placeholder img-placeholder-tall" role="img"
+                                aria-label="Placeholder for project cover image">
+                                [ img/nsiaf-cover.jpg ]
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <span class="tag">Unity</span>
+                            <span class="tag">C#</span>
+                            <h3 id="sg-demo-card-title">Not Seeing Is A Flower</h3>
+                            <p>A 2D platformer with visual novel elements.</p>
+                            <a href="project-nsiaf.html" class="btn-submit">View Project →</a>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="sg-element" aria-labelledby="sg-biocard-heading">
+                    <h3 id="sg-biocard-heading">Bio Card</h3>
+                    <p class="sg-label">CSS selector:</p>
+                    <p>.bio-card</p>
+                    <p class="sg-label">Sample code:</p>
+                    <pre class="code-block">&lt;div class="bio-card"&gt;
+    &lt;p&gt;I'm a designer-developer with a passion for interactive media...&lt;/p&gt;
+&lt;/div&gt;</pre>
+                    <p class="sg-label">Rendered element:</p>
+                    <div class="bio-card">
+                        <p>I'm a designer-developer with a passion for interactive media and game design. I enjoy
+                            working across the full creative process — from scripting gameplay systems to illustrating
+                            the worlds that bring them to life.</p>
+                    </div>
+                </section>
+
+                <section class="sg-element" aria-labelledby="sg-imgplaceholder-heading">
+                    <h3 id="sg-imgplaceholder-heading">Image Placeholder</h3>
+                    <p>Used wherever real project images will be placed. Replace with an
+                        <code class="inline-code">&lt;img&gt;</code> or
+                        <code class="inline-code">&lt;picture&gt;</code> element.
+                    </p>
+                    <p class="sg-label">CSS selector:</p>
+                    <p>.img-placeholder, .img-placeholder-tall, .img-placeholder-short</p>
+                    <p class="sg-label">Sample code:</p>
+                    <pre class="code-block">&lt;div class="img-placeholder img-placeholder-tall"
+     role="img" aria-label="Description of image"&gt;
+    [ img/nsiaf-gameplay.jpg ]
+&lt;/div&gt;</pre>
+                    <p class="sg-label">Rendered element:</p>
+                    <div class="sg-placeholder-demo">
+                        <div class="img-placeholder img-placeholder-tall" role="img"
+                            aria-label="Placeholder for a project gameplay screenshot">
+                            [ img/nsiaf-gameplay.jpg ]<br>Replace with real image
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+
+            <!-- ==========================================
+                     BRANDING
+                     ========================================== -->
+            <section class="sg-section" id="branding" aria-labelledby="sg-branding-heading">
+                <h2 id="sg-branding-heading">Branding Elements</h2>
+
+                <section class="sg-element" aria-labelledby="sg-about-heading">
+                    <h3 id="sg-about-heading">About This Portfolio</h3>
+                    <h4>Ethos</h4>
+                    <p>
+                        This portfolio presents me as a designer-developer who works at the
+                        intersection of technical implementation and creative experience. I want
+                        to communicate that I can build systems, design for players, and contribute
+                        meaningfully to a creative team — while also being someone who cares deeply
+                        about how things look and feel.
+                    </p>
+                    <h4>Target Audience</h4>
+                    <p>
+                        Recruiters, hiring managers, and creative teams looking for junior candidates
+                        in UX design, game UX, frontend development, and interactive media. Both
+                        technical and creative audiences are addressed: the monospace type and dark
+                        theme signal technical fluency, while the project work and art speak to
+                        creative range.
+                    </p>
+                    <h4>Visual Identity Summary</h4>
+                    <p>
+                        Minimal dark interface with a single strong accent colour (Terminal Green).
+                        The design avoids decoration for its own sake — every element earns its place.
+                        The blinking cursor on the logo is the one signature detail that quietly ties
+                        the visual identity to the coder/game aesthetic without being heavy-handed.
+                    </p>
+                </section>
+
+                <section class="sg-element" aria-labelledby="sg-palette-heading">
+                    <h3 id="sg-palette-heading">Colour Palette</h3>
+                    <div class="palette-container">
+                        <div class="palette-box">
+                            <div class="swatch col-bg">
+                                <ul>
+                                    <li>Deep Void</li>
+                                    <li>#0f1117</li>
+                                </ul>
+                            </div>
+                            <p>Main background of the website.</p>
+                        </div>
+                        <div class="palette-box">
+                            <div class="swatch col-surface">
+                                <ul>
+                                    <li>Slate</li>
+                                    <li>#1a1d27</li>
+                                </ul>
+                            </div>
+                            <p>Card and section backgrounds.</p>
+                        </div>
+                        <div class="palette-box">
+                            <div class="swatch col-border-sw">
+                                <ul>
+                                    <li>Grid Line</li>
+                                    <li>#2a2d3a</li>
+                                </ul>
+                            </div>
+                            <p>Borders, dividers, and outlines.</p>
+                        </div>
+                        <div class="palette-box">
+                            <div class="swatch col-green-sw">
+                                <ul>
+                                    <li>Terminal Green</li>
+                                    <li>#4ade80</li>
+                                </ul>
+                            </div>
+                            <p>Primary accent: links, tags, labels, buttons, highlights.</p>
+                        </div>
+                        <div class="palette-box">
+                            <div class="swatch col-green-dim">
+                                <ul>
+                                    <li>Forest</li>
+                                    <li>#22543d</li>
+                                </ul>
+                            </div>
+                            <p>Muted green for tag backgrounds and placeholder fills.</p>
+                        </div>
+                        <div class="palette-box">
+                            <div class="swatch col-text-sw">
+                                <ul>
+                                    <li>Frost</li>
+                                    <li>#e2e8f0</li>
+                                </ul>
+                            </div>
+                            <p>Main body text colour.</p>
+                        </div>
+                        <div class="palette-box">
+                            <div class="swatch col-muted-sw">
+                                <ul>
+                                    <li>Dim</li>
+                                    <li>#64748b</li>
+                                </ul>
+                            </div>
+                            <p>Secondary / muted text, metadata, nav links.</p>
+                        </div>
+                        <div class="palette-box">
+                            <div class="swatch col-white-sw">
+                                <ul>
+                                    <li>White</li>
+                                    <li>#ffffff</li>
+                                </ul>
+                            </div>
+                            <p>Used in button hover states and high-contrast headings.</p>
+                        </div>
+                    </div>
+                    <h4>Colour Relationships</h4>
+                    <p>
+                        The palette uses a near-black background family (Void, Slate, Grid Line)
+                        as its foundation, evoking a code editor or terminal environment. Terminal
+                        Green is the sole accent, chosen for its association with command-line
+                        interfaces and classic game UI, while staying readable and accessible.
+                        Frost and Dim provide two levels of text hierarchy without introducing
+                        additional hues. The palette is intentionally restrained — one accent
+                        colour keeps everything legible and avoids visual noise.
+                    </p>
+                </section>
+
+                <section class="sg-element" aria-labelledby="sg-type-heading">
+                    <h3 id="sg-type-heading">Typefaces / Fonts</h3>
+                    <h4>Source Code Pro — Headings &amp; UI</h4>
+                    <p>
+                        A monospace typeface designed by Paul D. Hunt for Adobe. Used for all
+                        headings (h1–h4), navigation, labels, tags, and code blocks.
+                        Weights used: Regular (400), SemiBold (600), Bold (700).
+                        Chosen because monospace type directly references coding environments
+                        and game engine interfaces — it communicates technical fluency without
+                        being a cliché.
+                    </p>
+                    <!-- Font source: https://fonts.google.com/specimen/Source+Code+Pro -->
+                    <h4>Inter — Body</h4>
+                    <p>
+                        A sans-serif typeface designed by Rasmus Andersson, optimised for
+                        screen readability. Used for all paragraph text and longer-form content.
+                        Weight used: Regular (400).
+                        Chosen for its clean legibility at small sizes, which keeps process
+                        analysis text easy to read without competing with the monospace headings.
+                    </p>
+                    <!-- Font source: https://fonts.google.com/specimen/Inter -->
+                </section>
+
+                <section class="sg-element" aria-labelledby="sg-cursor-heading">
+                    <h3 id="sg-cursor-heading">Signature Design Element</h3>
+                    <p>
+                        The blinking cursor appended to the site logo
+                        (<code class="inline-code">mark_</code>) is the portfolio's single
+                        signature detail. It is implemented in CSS using
+                        <code class="inline-code">@keyframes</code> and
+                        <code class="inline-code">animation</code>.
+                        It references both the typing cursor of a code editor and the input
+                        prompt of a game console or terminal — directly connecting the visual
+                        identity to the ethos being presented.
+                    </p>
+                    <!-- Reference: https://www.w3schools.com/cssref/css3_pr_animation.php -->
+                    <!-- Reference: https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php -->
+                    <p class="sg-label">Rendered element (see header for live version):</p>
+                    <p class="sg-cursor-demo" aria-label="Logo with blinking cursor">mark_</p>
+                </section>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="footer-bar" role="contentinfo">
+        <div class="footer-company">
+            <h3>mark_</h3>
+            <p>Designer. Developer. Game maker.</p>
+        </div>
+        <nav aria-label="Footer navigation — pages">
+            <h4>Pages</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="citations.html">Citations</a></li>
+                <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+            </ul>
+        </nav>
+        <nav aria-label="Footer navigation — projects">
+            <h4>Projects</h4>
+            <ul>
+                <li><a href="project-nsiaf.html">Not Seeing Is A Flower</a></li>
+                <li><a href="project-metamorphosis.html">Metamorphosis</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

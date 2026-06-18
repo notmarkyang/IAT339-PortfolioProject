@@ -1,0 +1,648 @@
+/* =============================================
+   PORTFOLIO - main.css
+   Font: Source Code Pro (monospace, headings) + Inter (body)
+   Google Fonts: https://fonts.google.com/
+   ============================================= */
+
+/* Google Fonts import
+   Reference: https://developers.google.com/fonts/docs/getting_started */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&family=Inter:wght@300;400;500&display=swap');
+
+/* =============================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   Reference: https://www.w3schools.com/css/css3_variables.asp
+   ============================================= */
+:root {
+    --col-bg: #0f1117;
+    --col-surface: #1a1d27;
+    --col-border: #2a2d3a;
+    --col-green: #4ade80;
+    --col-green-dim: #22543d;
+    --col-text: #e2e8f0;
+    --col-muted: #64748b;
+    --col-white: #ffffff;
+    --col-heading: #f8fafc;
+
+    --font-mono: 'Source Code Pro', monospace;
+    --font-body: 'Inter', sans-serif;
+
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 4rem;
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+}
+
+/* =============================================
+   RESET / BASE
+   ============================================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--col-bg);
+    color: var(--col-text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: var(--col-green);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+    color: var(--col-white);
+}
+
+/* =============================================
+   TYPOGRAPHY
+   ============================================= */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-mono);
+    color: var(--col-heading);
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+}
+
+.section-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--col-green);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+/* =============================================
+   LAYOUT UTILITIES
+   ============================================= */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+}
+
+/* =============================================
+   HEADER / NAV
+   ============================================= */
+.header-bar {
+    background-color: var(--col-surface);
+    border-bottom: 1px solid var(--col-border);
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-bar h1 {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--col-green);
+    margin: 0;
+}
+
+/* Blinking cursor on logo
+   Reference: https://www.w3schools.com/cssref/css3_pr_animation.php
+   Reference: https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php */
+.header-bar h1::after {
+    content: '_';
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.nav-text {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.nav-link {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--col-muted);
+    text-decoration: none;
+    /* Reference: https://www.w3schools.com/cssref/css3_pr_transition.php */
+    transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--col-green);
+    text-decoration: none;
+}
+
+/* Skip to main content link for keyboard/screen reader users */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: var(--space-md);
+    background-color: var(--col-green);
+    color: var(--col-bg);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    z-index: 200;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: var(--space-md);
+    color: var(--col-bg);
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.footer-bar {
+    background-color: var(--col-surface);
+    border-top: 1px solid var(--col-border);
+    padding: var(--space-xl) var(--space-lg);
+    display: flex;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.footer-bar h3,
+.footer-bar h4 {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--col-green);
+    margin-bottom: var(--space-sm);
+}
+
+.footer-bar p,
+.footer-bar li {
+    font-size: 0.85rem;
+    color: var(--col-muted);
+}
+
+.footer-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-bar ul li {
+    margin-bottom: var(--space-xs);
+}
+
+.footer-bar a {
+    color: var(--col-muted);
+    font-size: 0.85rem;
+}
+
+.footer-bar a:hover,
+.footer-bar a:focus {
+    color: var(--col-green);
+    text-decoration: none;
+}
+
+.footer-company {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* =============================================
+   BUTTONS
+   ============================================= */
+.btn-submit {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    background-color: var(--col-green);
+    color: var(--col-bg);
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-block;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+    background-color: var(--col-white);
+    color: var(--col-bg);
+    text-decoration: none;
+}
+
+.btn-submit:active {
+    transform: scale(0.97);
+}
+
+.btn-outline {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    background-color: transparent;
+    color: var(--col-green);
+    border: 1px solid var(--col-green);
+    padding: 0.6rem 1.4rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-block;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+    background-color: var(--col-green);
+    color: var(--col-bg);
+    text-decoration: none;
+}
+
+/* =============================================
+   IN-TEXT LINK
+   ============================================= */
+.text-link {
+    color: var(--col-green);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.text-link:hover,
+.text-link:focus {
+    color: var(--col-white);
+}
+
+/* =============================================
+   CARDS
+   ============================================= */
+.card {
+    background-color: var(--col-surface);
+    border: 1px solid var(--col-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+}
+
+/* =============================================
+   PROJECT CARD (homepage)
+   ============================================= */
+.project-card {
+    background-color: var(--col-surface);
+    border: 1px solid var(--col-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: border-color 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    border-color: var(--col-green);
+}
+
+.project-card-img {
+    width: 100%;
+}
+
+.project-card-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card-body {
+    padding: var(--space-lg);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-body h3 {
+    margin-bottom: var(--space-sm);
+    font-size: 1.1rem;
+}
+
+.project-card-body p {
+    color: var(--col-muted);
+    font-size: 0.9rem;
+    flex: 1;
+}
+
+.project-card-body .btn-submit {
+    margin-top: var(--space-md);
+    align-self: flex-start;
+}
+
+/* =============================================
+   TAGS
+   ============================================= */
+.tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--col-green);
+    background-color: var(--col-green-dim);
+    border-radius: var(--radius-sm);
+    padding: 0.15rem 0.5rem;
+    margin-right: var(--space-xs);
+    margin-bottom: var(--space-sm);
+}
+
+/* =============================================
+   SKILL LIST
+   ============================================= */
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.skill-list li {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--col-green);
+    background-color: var(--col-green-dim);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+}
+
+/* =============================================
+   IMAGE PLACEHOLDER
+   ============================================= */
+.img-placeholder {
+    width: 100%;
+    background-color: var(--col-green-dim);
+    border: 1px dashed var(--col-green);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--col-green);
+    text-align: center;
+    padding: var(--space-md);
+}
+
+.img-placeholder-tall {
+    height: 260px;
+}
+
+.img-placeholder-short {
+    height: 160px;
+}
+
+/* =============================================
+   DIVIDER
+   ============================================= */
+.divider {
+    border: none;
+    border-top: 1px solid var(--col-border);
+    margin: var(--space-xl) 0;
+}
+
+/* =============================================
+   STYLE GUIDE SPECIFIC
+   ============================================= */
+.palette-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.palette-box {
+    width: 160px;
+}
+
+.swatch {
+    height: 80px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--col-border);
+    margin-bottom: var(--space-sm);
+    display: flex;
+    align-items: flex-end;
+    padding: var(--space-sm);
+}
+
+.swatch ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+}
+
+.col-bg {
+    background-color: #0f1117;
+}
+
+.col-surface {
+    background-color: #1a1d27;
+}
+
+.col-border-sw {
+    background-color: #2a2d3a;
+}
+
+.col-green-sw {
+    background-color: #4ade80;
+}
+
+.col-green-dim {
+    background-color: #22543d;
+}
+
+.col-text-sw {
+    background-color: #e2e8f0;
+}
+
+.col-muted-sw {
+    background-color: #64748b;
+}
+
+.col-white-sw {
+    background-color: #ffffff;
+    border: 1px solid #2a2d3a;
+}
+
+.swatch.col-bg ul,
+.swatch.col-surface ul,
+.swatch.col-border-sw ul {
+    color: #e2e8f0;
+}
+
+.swatch.col-green-sw ul,
+.swatch.col-text-sw ul,
+.swatch.col-white-sw ul {
+    color: #0f1117;
+}
+
+.swatch.col-green-dim ul,
+.swatch.col-muted-sw ul {
+    color: #e2e8f0;
+}
+
+.code-block {
+    background-color: var(--col-surface);
+    border: 1px solid var(--col-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-md);
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--col-text);
+    /* Reference: https://www.w3schools.com/cssref/pr_pos_overflow.php */
+    overflow-x: auto;
+    white-space: pre;
+    margin-bottom: var(--space-md);
+}
+
+.sg-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--col-muted);
+    margin-bottom: var(--space-xs);
+}
+
+/* inline code references inside prose */
+.inline-code {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--col-green);
+    background-color: var(--col-surface);
+    padding: 0.1em 0.4em;
+    border-radius: var(--radius-sm);
+}
+
+/* static nav demo in style guide — remove sticky */
+.sg-nav-demo {
+    position: static;
+}
+
+/* =============================================
+   RESPONSIVE
+   Reference: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+   ============================================= */
+@media (max-width: 700px) {
+    .header-bar {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+
+    .nav-text {
+        gap: var(--space-md);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .footer-bar {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+
+    .palette-container {
+        justify-content: center;
+    }
+}
+
+/* =============================================
+   STYLE GUIDE — additional classes
+   ============================================= */
+
+/* hero description on style guide page */
+.sg-hero-desc {
+    color: var(--col-muted);
+    max-width: 580px;
+}
+
+/* button demo row in style guide */
+.sg-btn-demo {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+/* constrain placeholder width in style guide demo */
+.sg-placeholder-demo {
+    max-width: 400px;
+}
+
+/* blinking cursor demo in branding section */
+.sg-cursor-demo {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--col-green);
+}
+
+.sg-cursor-demo::after {
+    content: '_';
+    animation: blink 1s step-end infinite;
+}

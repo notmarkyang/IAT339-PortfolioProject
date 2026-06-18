@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark — Portfolio</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/page.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="header-bar" role="banner">
+        <h1>mark</h1>
+        <nav class="nav-text" aria-label="Main navigation">
+            <a href="index.html" class="nav-link">home</a>
+            <a href="#projects" class="nav-link">projects</a>
+            <a href="#skills" class="nav-link">skills</a>
+            <a href="styleguide.html" class="nav-link">style guide</a>
+            <a href="https://github.com/" class="nav-link" target="_blank" rel="noopener noreferrer">github ↗</a>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+
+        <!-- HERO -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <span class="hero-prompt">// hello, world</span>
+            <h2 id="hero-heading">
+                designer.<br>
+                developer.<br>
+                <span class="hero-highlight">game maker.</span>
+            </h2>
+            <p class="hero-sub">
+                I build interactive experiences — from platformer mechanics to background art.
+                I care about how things feel to play, and how they look while doing it.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-submit">View Projects</a>
+                <a href="https://github.com/" class="btn-outline" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- BIO -->
+        <section class="home-section" id="about" aria-labelledby="about-heading">
+            <span class="section-label">// about</span>
+            <h2 id="about-heading">Bio</h2>
+            <div class="bio-card">
+                <p>
+                    I'm a designer-developer with a passion for interactive media and game design.
+                    I enjoy working across the full creative process — scripting gameplay systems,
+                    designing levels, and creating the art that brings a world to life. Whether I'm
+                    building a 2D platformer in Unity or illustrating backgrounds for a visual novel,
+                    I approach every project with curiosity, iteration, and a deep respect for the
+                    player's experience. I'm drawn to work where technical skill and creative thinking
+                    are equally valued.
+                </p>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- PROJECTS -->
+        <section class="home-section" id="projects" aria-labelledby="projects-heading">
+            <span class="section-label">// projects</span>
+            <h2 id="projects-heading">Process Analyses</h2>
+
+            <div class="project-grid">
+
+                <article class="project-card" aria-labelledby="card-nsiaf-title">
+                    <div class="project-card-img">
+                        <!-- Replace with: <img src="img/nsiaf-cover.jpg" alt="Not Seeing Is A Flower title screen"> -->
+                        <div class="img-placeholder img-placeholder-tall" role="img"
+                            aria-label="Placeholder for NSIAF cover image">
+                            [ img/nsiaf-cover.jpg ]<br>Title screen or gameplay screenshot
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-card-tags" aria-label="Project tags">
+                            <span class="tag">Unity / C#</span>
+                            <span class="tag">Level Design</span>
+                            <span class="tag">Project Lead</span>
+                        </div>
+                        <h3 id="card-nsiaf-title">Not Seeing Is A Flower</h3>
+                        <p>
+                            A 2D platformer with visual novel elements. I scripted core gameplay
+                            systems, managed the team, and contributed title screen art.
+                        </p>
+                        <a href="project-nsiaf.html" class="btn-submit">View Project →</a>
+                    </div>
+                </article>
+
+                <article class="project-card" aria-labelledby="card-meta-title">
+                    <div class="project-card-img">
+                        <!-- Replace with: <img src="img/metamorphosis-cover.jpg" alt="Metamorphosis visual novel background art"> -->
+                        <div class="img-placeholder img-placeholder-tall" role="img"
+                            aria-label="Placeholder for Metamorphosis cover image">
+                            [ img/metamorphosis-cover.jpg ]<br>Visual novel background art
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-card-tags" aria-label="Project tags">
+                            <span class="tag">Visual Novel</span>
+                            <span class="tag">Art Direction</span>
+                            <span class="tag">Writing</span>
+                        </div>
+                        <h3 id="card-meta-title">Metamorphosis</h3>
+                        <p>
+                            A visual novel co-written and directed by me. I handled all background
+                            art and helped shape the story's emotional arc.
+                        </p>
+                        <a href="project-metamorphosis.html" class="btn-submit">View Project →</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- SKILLS -->
+        <section class="home-section" id="skills" aria-labelledby="skills-heading">
+            <span class="section-label">// skills</span>
+            <h2 id="skills-heading">What I Work With</h2>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Development</h3>
+                    <ul class="skill-list" aria-label="Development skills">
+                        <li>Unity</li>
+                        <li>C#</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Design</h3>
+                    <ul class="skill-list" aria-label="Design skills">
+                        <li>UX / UI</li>
+                        <li>Level Design</li>
+                        <li>Illustration</li>
+                        <li>Art Direction</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Process</h3>
+                    <ul class="skill-list" aria-label="Process skills">
+                        <li>Playtesting</li>
+                        <li>Iteration</li>
+                        <li>Team Lead</li>
+                        <li>Git</li>
+                        <li>Prototyping</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-bar" role="contentinfo">
+        <div class="footer-company">
+            <h3>mark_</h3>
+            <p>Designer. Developer. Game maker.</p>
+        </div>
+        <nav aria-label="Footer navigation — pages">
+            <h4>Pages</h4>
+            <ul>
+                <li><a href="styleguide.html">Style Guide</a></li>
+                <li><a href="citations.html">Citations</a></li>
+                <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+            </ul>
+        </nav>
+        <nav aria-label="Footer navigation — projects">
+            <h4>Projects</h4>
+            <ul>
+                <li><a href="project-nsiaf.html">Not Seeing Is A Flower</a></li>
+                <li><a href="project-metamorphosis.html">Metamorphosis</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,407 @@
+/* =============================================
+   PORTFOLIO - page.css
+   Page-specific styles
+   ============================================= */
+
+/* =============================================
+   HOMEPAGE — HERO
+   ============================================= */
+.hero {
+    padding: 6rem var(--space-lg) 5rem;
+    max-width: 62.5rem;
+    margin: 0 auto;
+}
+
+.hero-prompt {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--col-green);
+    margin-bottom: var(--space-sm);
+    display: block;
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    line-height: 1.15;
+    margin-bottom: var(--space-md);
+    color: var(--col-heading);
+}
+
+.hero-highlight {
+    color: var(--col-green);
+}
+
+.hero-sub {
+    color: var(--col-muted);
+    font-size: 1.05rem;
+    max-width: 35rem;
+    margin-bottom: var(--space-lg);
+}
+
+.hero-actions {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+/* =============================================
+   HOMEPAGE — SECTIONS
+   ============================================= */
+.home-section {
+    padding: var(--space-xl) var(--space-lg);
+    max-width: 62.5rem;
+    margin: 0 auto;
+}
+
+.home-section h2 {
+    margin-bottom: var(--space-lg);
+}
+
+/* =============================================
+   HOMEPAGE — BIO CARD
+   ============================================= */
+.bio-card {
+    background-color: var(--col-surface);
+    border: 1px solid var(--col-border);
+    border-left: 0.1875rem solid var(--col-green);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    max-width: 42.5rem;
+}
+
+.bio-card p {
+    color: var(--col-text);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* =============================================
+   HOMEPAGE — PROJECT GRID
+   Reference: https://www.w3schools.com/css/css_grid.asp
+   ============================================= */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+}
+
+/* =============================================
+   HOMEPAGE — SKILLS SECTION
+   ============================================= */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--space-md);
+}
+
+.skill-category h4 {
+    color: var(--col-green);
+    font-size: 0.85rem;
+    margin-bottom: var(--space-sm);
+    font-family: var(--font-mono);
+}
+
+/* =============================================
+   PROJECT PAGES — HERO
+   ============================================= */
+.project-hero {
+    padding: 4rem var(--space-lg) 3rem;
+    max-width: 62.5rem;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--col-border);
+}
+
+.project-hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: var(--space-sm);
+}
+
+.project-hero-desc {
+    color: var(--col-muted);
+    max-width: 37.5rem;
+    margin-bottom: var(--space-md);
+}
+
+.project-hero-tags {
+    margin-top: var(--space-lg);
+}
+
+.project-hero-meta {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    margin-top: var(--space-md);
+}
+
+.meta-item {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+.meta-label {
+    color: var(--col-muted);
+    margin-right: var(--space-xs);
+}
+
+.meta-value {
+    color: var(--col-green);
+}
+
+/* =============================================
+   PROJECT PAGES — BODY
+   ============================================= */
+.project-body {
+    max-width: 62.5rem;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-lg);
+}
+
+.project-analysis {
+    margin-bottom: var(--space-xl);
+}
+
+/* Artifact section labels */
+.artifact-label {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--col-muted);
+    margin-bottom: var(--space-sm);
+    display: block;
+}
+
+/* Two-column split layout */
+.project-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+    margin-bottom: var(--space-xl);
+}
+
+/* Artifact gallery — 2 col grid */
+.artifact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+/* Full-width artifact */
+.artifact-full {
+    margin-bottom: var(--space-lg);
+}
+
+/* Tall placeholder for cover/hero images */
+.img-placeholder-cover {
+    height: 21.25rem;
+}
+
+/* Video placeholder */
+.img-placeholder-video {
+    height: 20rem;
+}
+
+/* Title art placeholder */
+.img-placeholder-titleart {
+    height: 17.5rem;
+}
+
+/* Real project images */
+.project-image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border: 1px solid var(--col-border);
+    border-radius: var(--radius-sm);
+}
+
+.project-image-tall {
+    max-height: 37.5rem;
+}
+
+/* Pull quote / callout */
+.callout {
+    border-left: 0.1875rem solid var(--col-green);
+    padding: var(--space-md) var(--space-lg);
+    background-color: var(--col-surface);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin: var(--space-lg) 0;
+    font-style: italic;
+    color: var(--col-text);
+}
+
+/* Previous / next project nav row */
+.project-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+/* =============================================
+   STYLE GUIDE PAGE
+   ============================================= */
+.sg-hero {
+    padding: 3rem var(--space-lg) 2rem;
+    max-width: 62.5rem;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--col-border);
+}
+
+.sg-body {
+    max-width: 62.5rem;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-lg);
+}
+
+.sg-section {
+    margin-bottom: var(--space-xl);
+}
+
+.sg-section>h3 {
+    color: var(--col-green);
+    border-bottom: 1px solid var(--col-border);
+    padding-bottom: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+.sg-element {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px dashed var(--col-border);
+}
+
+.sg-element:last-child {
+    border-bottom: none;
+}
+
+/* constrain rendered card example width */
+.sg-card-demo {
+    max-width: 22.5rem;
+}
+
+/* =============================================
+   CITATIONS PAGE
+   ============================================= */
+.citations-body {
+    max-width: 62.5rem;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-lg);
+}
+
+.citations-intro {
+    color: var(--col-muted);
+    margin-bottom: var(--space-xl);
+}
+
+.citations-group {
+    margin-bottom: var(--space-xl);
+}
+
+.citations-group-title {
+    color: var(--col-green);
+    font-size: 1rem;
+    margin-bottom: var(--space-md);
+}
+
+/* Hanging indent for citations
+   Reference: https://www.w3schools.com/cssref/pr_text_text-indent.php */
+.citation-item {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--col-muted);
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-lg);
+    text-indent: calc(-1 * var(--space-lg));
+}
+
+.citation-item a {
+    color: var(--col-muted);
+    word-break: break-all;
+}
+
+.citation-item a:hover,
+.citation-item a:focus {
+    color: var(--col-green);
+}
+
+.citations-note {
+    color: var(--col-muted);
+    font-size: 0.85rem;
+}
+
+/* =============================================
+   RESPONSIVE
+   Reference: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+   ============================================= */
+@media (max-width: 43.75rem) {
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-split {
+        grid-template-columns: 1fr;
+    }
+
+    .artifact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-hero h2 {
+        font-size: 1.6rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-nav {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 30rem) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =============================================
+   PROJECT PAGES — meta dl/dt/dd reset
+   ============================================= */
+.project-hero-meta {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    margin-top: var(--space-md);
+    /* reset dl default margins */
+    margin-block-start: var(--space-md);
+    margin-block-end: 0;
+    padding: 0;
+}
+
+.project-hero-meta .meta-item {
+    display: flex;
+    gap: var(--space-xs);
+    align-items: baseline;
+}
+
+/* dt / dd reset — browsers add margin to dd by default */
+.project-hero-meta dt,
+.project-hero-meta dd {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}

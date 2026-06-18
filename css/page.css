@@ -95,7 +95,7 @@
     gap: var(--space-md);
 }
 
-.skill-category h4 {
+.skill-category h3 {
     color: var(--col-green);
     font-size: 0.85rem;
     margin-bottom: var(--space-sm);
@@ -261,7 +261,7 @@
     scroll-margin-top: 6rem;
 }
 
-.sg-section>h3 {
+.sg-section > h2 {
     color: var(--col-green);
     border-bottom: 1px solid var(--col-border);
     padding-bottom: var(--space-sm);
@@ -281,6 +281,19 @@
 /* constrain rendered card example width */
 .sg-card-demo {
     max-width: 22.5rem;
+}
+
+.sg-logo-demo {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--col-green);
+    margin: 0;
+}
+
+.sg-logo-demo::after {
+    content: '_';
+    animation: blink 1s step-end infinite;
 }
 
 /* =============================================
@@ -386,7 +399,6 @@
     gap: var(--space-md);
     flex-wrap: wrap;
     margin-top: var(--space-md);
-    /* reset dl default margins */
     margin-block-start: var(--space-md);
     margin-block-end: 0;
     padding: 0;
@@ -398,7 +410,6 @@
     align-items: baseline;
 }
 
-/* dt / dd reset — browsers add margin to dd by default */
 .project-hero-meta dt,
 .project-hero-meta dd {
     margin: 0;

@@ -391,6 +391,21 @@ p {
     align-self: flex-start;
 }
 
+.project-card-tags,
+.project-hero-tags {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-sm) 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.project-card-tags .tag,
+.project-hero-tags .tag {
+    margin-right: 0;
+}
+
 /* =============================================
    TAGS
    ============================================= */
@@ -648,4 +663,35 @@ p {
 .sg-cursor-demo::after {
     content: '_';
     animation: blink 1s step-end infinite;
+}
+
+/* headings for validator error */
+.sg-demo-h1,
+.sg-demo-h2,
+.sg-demo-h3,
+.sg-demo-h4 {
+    font-family: var(--font-mono);
+    color: var(--col-heading);
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+.sg-demo-h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.sg-demo-h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.sg-demo-h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.sg-demo-h4 {
+    font-size: 1rem;
+    font-weight: 600;
 }

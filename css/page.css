@@ -132,6 +132,13 @@
     padding: 0;
 }
 
+.project-actions {
+    margin-top: var(--space-md);
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
 .project-hero-meta {
     display: flex;
     gap: var(--space-md);

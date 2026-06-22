@@ -14,7 +14,7 @@
 
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="header-bar">
+    <header class="header-bar" role="banner">
         <h1>mark</h1>
         <nav class="nav-text" aria-label="Main navigation">
             <a href="index.html" class="nav-link">home</a>
@@ -26,7 +26,7 @@
         </nav>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" role="main">
 
         <!-- PROJECT HERO -->
         <div class="project-hero">
@@ -64,14 +64,10 @@
         <div class="project-body">
 
             <!-- COVER IMAGE -->
-            <div class="artifact-full">
-                <!-- replace later with bg art> -->
-                <div class="img-placeholder img-placeholder-tall img-placeholder-cover" role="img"
-                    aria-label="Placeholder for Metamorphosis cover — key background art or title screen">
-                    [ img/metamorphosis-cover.jpg ]<br>
-                    Key background art or title screen
-                </div>
-            </div>
+            <figure class="artifact-full artifact-card">
+                <img src="img/metamorphosis-cover.webp" alt="Metamorphosis title screen or key background art">
+                <figcaption>Key background art / title screen</figcaption>
+            </figure>
 
             <!-- PROCESS ANALYSIS -->
             <section class="project-analysis" aria-labelledby="analysis-heading">
@@ -176,65 +172,68 @@
 
                 <h4 class="artifact-label">Background Art</h4>
                 <div class="artifact-grid">
-                    <div class="img-placeholder img-placeholder-tall" role="img"
-                        aria-label="Background art — classroom during the day">
-                        [ img/meta-bg-classroom.jpg ]<br>Classroom — day
-                    </div>
-                    <div class="img-placeholder img-placeholder-tall" role="img"
-                        aria-label="Background art — classroom at dusk or evening">
-                        [ img/meta-bg-classroom-dusk.jpg ]<br>Classroom — dusk / evening
-                    </div>
-                    <div class="img-placeholder img-placeholder-tall" role="img"
-                        aria-label="Background art — outdoor school grounds scene">
-                        [ img/meta-bg-outdoor.jpg ]<br>Outdoor / school grounds scene
-                    </div>
-                    <div class="img-placeholder img-placeholder-tall" role="img"
-                        aria-label="Background art — interior home or hallway scene">
-                        [ img/meta-bg-indoor.jpg ]<br>Interior — home or hallway
-                    </div>
+                    <figure class="artifact-card">
+                        <img src="img/meta-bg-classroom.webp" alt="Background art of a classroom during the day">
+                        <figcaption>Classroom — day</figcaption>
+                    </figure>
+
+                    <figure class="artifact-card">
+                        <img src="img/meta-bg-classroom-dusk.webp" alt="Background art of a classroom at dusk">
+                        <figcaption>Classroom — dusk / evening</figcaption>
+                    </figure>
+
+                    <figure class="artifact-card">
+                        <img src="img/meta-bg-outdoor.webp" alt="Background art of the outdoor scene by Hiroto's home">
+                        <figcaption>Outdoor scene</figcaption>
+                    </figure>
+
+                    <figure class="artifact-card">
+                        <img src="img/meta-bg-indoor.webp" alt="Background art of Hiroto's Room scene">
+                        <figcaption>Interior — Hiroto's Room</figcaption>
+                    </figure>
                 </div>
 
                 <h4 class="artifact-label">In-Game Screenshots</h4>
                 <div class="artifact-grid">
-                    <div class="img-placeholder img-placeholder-tall" role="img"
-                        aria-label="In-game screenshot showing background art with character sprite">
-                        [ img/meta-ingame-1.jpg ]<br>Background + character sprite in-engine
-                    </div>
-                    <div class="img-placeholder img-placeholder-tall" role="img"
-                        aria-label="In-game screenshot showing a dialogue scene example">
-                        [ img/meta-ingame-2.jpg ]<br>Dialogue scene example
-                    </div>
+                    <figure class="artifact-card">
+                        <img src="img/meta-ingame-1.webp"
+                            alt="In-game screenshot showing background art with a character sprite">
+                        <figcaption>Background + character sprite in-engine</figcaption>
+                    </figure>
+
+                    <figure class="artifact-card">
+                        <img src="img/meta-ingame-2.webp" alt="In-game screenshot showing a dialogue scene example">
+                        <figcaption>Dialogue scene example</figcaption>
+                    </figure>
                 </div>
 
                 <h4 class="artifact-label">Art Process &amp; Early Sketches</h4>
                 <div class="artifact-grid">
-                    <div class="img-placeholder img-placeholder-tall" role="img"
-                        aria-label="Background composition sketch from early development">
-                        [ img/meta-sketch-1.jpg ]<br>Background composition sketch
-                    </div>
-                    <div class="img-placeholder img-placeholder-tall" role="img"
-                        aria-label="Colour palette and style reference sheet">
-                        [ img/meta-colour-palette.jpg ]<br>Colour palette / style reference
-                    </div>
+                    <figure class="artifact-card">
+                        <img src="img/meta-sketch-1.webp" alt="Early background composition sketch from development">
+                        <figcaption>Background composition sketch</figcaption>
+                    </figure>
+
+                    <figure class="artifact-card">
+                        <img src="img/meta-colour-palette.webp" alt="Colour palette and visual style reference sheet">
+                        <figcaption>Colour palette / style reference</figcaption>
+                    </figure>
                 </div>
 
                 <h4 class="artifact-label">Writing Sample</h4>
-                <div class="artifact-full">
-                    <div class="img-placeholder img-placeholder-short" role="img"
-                        aria-label="Screenshot of script excerpt or dialogue draft">
-                        [ img/meta-script.jpg ]<br>
-                        Script excerpt or dialogue draft screenshot
-                    </div>
-                </div>
+                <figure class="artifact-full artifact-card artifact-script">
+                    <img src="img/meta-script.webp" alt="Screenshot of a script excerpt or dialogue draft">
+                    <figcaption>Script excerpt / dialogue draft screenshot</figcaption>
+                </figure>
             </section>
 
-            <hr class="divider">
+                <hr class="divider">
 
-            <!-- PROJECT NAV -->
-            <nav class="project-nav" aria-label="Project navigation">
-                <a href="project-nsiaf.html" class="btn-outline">← Previous: NSIAF</a>
-                <a href="index.html" class="btn-submit">Back to Home →</a>
-            </nav>
+                <!-- PROJECT NAV -->
+                <nav class="project-nav" aria-label="Project navigation">
+                    <a href="project-nsiaf.html" class="btn-outline">← Previous: NSIAF</a>
+                    <a href="index.html" class="btn-submit">Back to Home →</a>
+                </nav>
 
         </div>
 

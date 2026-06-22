@@ -125,6 +125,11 @@
 
 .project-hero-tags {
     margin-top: var(--space-lg);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    list-style: none;
+    padding: 0;
 }
 
 .project-hero-meta {
@@ -192,6 +197,43 @@
     margin-bottom: var(--space-lg);
 }
 
+/* Artifact cards (REAL) */
+.artifact-card {
+    margin: 0 0 var(--space-lg);
+    padding: var(--space-sm);
+    background-color: var(--col-surface);
+    border: 1px solid var(--col-border);
+    border-radius: var(--radius-md);
+}
+
+.artifact-grid .artifact-card {
+    margin-bottom: 0;
+}
+
+.artifact-card img,
+.artifact-card video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--col-border);
+    display: block;
+    background-color: var(--col-bg);
+}
+
+.artifact-card figcaption {
+    margin-top: var(--space-sm);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--col-muted);
+}
+
+.artifact-script img {
+    object-fit: contain;
+    background-color: var(--col-bg);
+}
+
 /* Tall placeholder for cover/hero images */
 .img-placeholder-cover {
     height: 21.25rem;
@@ -241,6 +283,29 @@
 }
 
 /* =============================================
+   VIDEO CSS
+   ============================================= */
+
+/* Embedded video
+   Reference: https://www.w3schools.com/cssref/css_pr_aspect-ratio.php */
+.video-embed {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: var(--col-surface);
+    border: 1px solid var(--col-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.video-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* =============================================
    STYLE GUIDE PAGE
    ============================================= */
 .sg-hero {
@@ -261,7 +326,7 @@
     scroll-margin-top: 6rem;
 }
 
-.sg-section > h2 {
+.sg-section>h2 {
     color: var(--col-green);
     border-bottom: 1px solid var(--col-border);
     padding-bottom: var(--space-sm);

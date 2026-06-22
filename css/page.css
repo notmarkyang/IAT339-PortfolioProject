@@ -125,6 +125,11 @@
 
 .project-hero-tags {
     margin-top: var(--space-lg);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    list-style: none;
+    padding: 0;
 }
 
 .project-hero-meta {
@@ -205,13 +210,16 @@
     margin-bottom: 0;
 }
 
-.artifact-card img {
+.artifact-card img,
+.artifact-card video {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     object-position: center;
     border-radius: var(--radius-sm);
     border: 1px solid var(--col-border);
+    display: block;
+    background-color: var(--col-bg);
 }
 
 .artifact-card figcaption {

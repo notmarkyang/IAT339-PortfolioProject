@@ -14,7 +14,7 @@
 
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="header-bar">
+    <header class="header-bar" role="banner">
         <h1>mark</h1>
         <nav class="nav-text" aria-label="Main navigation">
             <a href="index.html" class="nav-link">home</a>
@@ -26,9 +26,10 @@
         </nav>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" role="main">
 
         <!-- PROJECT HERO -->
+        <!-- description tags: https://www.w3schools.com/tags/tag_dd.asp -->
         <div class="project-hero">
             <span class="section-label">// project — platformer / unity</span>
             <h2>Not Seeing Is A Flower</h2>
@@ -40,7 +41,7 @@
             <dl class="project-hero-meta">
                 <div class="meta-item">
                     <dt class="meta-label">Role</dt>
-                    <dd class="meta-value">Programmer · Project Manager · Title Art</dd>
+                    <dd class="meta-value">Programmer · Project Manager · Gameplay Polish · Title Art</dd>
                 </div>
                 <div class="meta-item">
                     <dt class="meta-label">Tools</dt>
@@ -66,7 +67,7 @@
 
             <!-- COVER IMAGE -->
             <div class="artifact-full">
-                <img src="img/nsiaf-cover.png" alt="Not Seeing Is A Flower title screen art"
+                <img src="img/nsiaf-cover.webp" alt="Not Seeing Is A Flower title screen art"
                     class="project-image project-image-tall">
             </div>
 
@@ -89,8 +90,11 @@
                     My role was both programmer and project manager. I scripted key gameplay systems
                     in Unity using C#, including player movement, double jumping, wall jumping,
                     dashing, attack hitboxes, enemy interactions, checkpoints, hazards, and quest
-                    progression. I also helped organize deadlines, communicate updates, and keep
-                    the team aligned with project milestones and scope.
+                    progression. I also helped improve the feel of the player experience by refining
+                    parts of the movement, combat feedback, and animation timing so actions such as
+                    dashing, attacking, and pogo movement felt more fluid during play. Beyond the
+                    technical work, I helped organize deadlines, communicate updates, and keep the
+                    team aligned with project milestones and scope.
                 </p>
 
                 <p>
@@ -136,6 +140,13 @@
                 </p>
 
                 <p>
+                    These changes are reflected in the gameplay artifacts below, especially the pogo,
+                    hazard, NPC dialogue, and wall jump / dash examples. I chose these artifacts
+                    because they show how the final level combined movement, combat, feedback, and
+                    quest progression instead of presenting the mechanics as isolated features.
+                </p>
+
+                <p>
                     The final outcome was a playable platformer level with ability progression, NPC
                     dialogue, enemies, hazards, and a clear ending. This project represents the
                     professional ethos I want my portfolio to communicate: I am a designer-developer
@@ -169,41 +180,50 @@
                 <span class="section-label">// artifacts</span>
                 <h3 id="artifacts-heading">Project Artifacts</h3>
 
-                <h4 class="artifact-label">Gameplay Screenshots</h4>
+                <h4 class="artifact-label">Gameplay Showcases</h4>
                 <div class="artifact-grid">
+
                     <figure class="artifact-card">
-                        <img src="img/nsiaf-gameplay-1.png" alt="Gameplay screenshot showing the double jump ability">
-                        <figcaption>Ability: Double Jump</figcaption>
+                        <video autoplay muted loop playsinline controls preload="metadata">
+                            <source src="video/nsiaf-pogo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Combat / Pogo Ability</figcaption>
                     </figure>
 
                     <figure class="artifact-card">
-                        <img src="img/nsiaf-gameplay-2.png"
-                            alt="Gameplay screenshot showing wall jump and dash movement">
-                        <figcaption>Ability: Wall Jump / Dash</figcaption>
+                        <video autoplay muted loop playsinline controls preload="metadata">
+                            <source src="video/nsiaf-hazard.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Hazard Interaction</figcaption>
                     </figure>
 
                     <figure class="artifact-card">
-                        <img src="img/nsiaf-gameplay-3.png"
-                            alt="Gameplay screenshot showing enemy interaction and hazards">
-                        <figcaption>Enemy interaction / hazard</figcaption>
-                    </figure>
-
-                    <figure class="artifact-card">
-                        <img src="img/nsiaf-gameplay-4.png"
+                        <img src="img/nsiaf-dialogue.webp"
                             alt="Gameplay screenshot showing NPC dialogue and quest progression">
-                        <figcaption>NPC dialogue / quest step</figcaption>
+                        <figcaption>NPC Dialogue / Quest Progression</figcaption>
                     </figure>
+
+                    <figure class="artifact-card">
+                        <video autoplay muted loop playsinline controls preload="metadata">
+                            <source src="video/nsiaf-walljump-dash.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Wall Jump / Dash Movement</figcaption>
+                    </figure>
+
                 </div>
 
                 <h4 class="artifact-label">Unity Scripts &amp; Inspector</h4>
                 <div class="artifact-grid">
                     <figure class="artifact-card artifact-script">
-                        <img src="img/nsiaf-script-1.png" alt="Screenshot of a player movement C# script">
+                        <img src="img/nsiaf-script-1.webp" alt="Screenshot of a player movement C# script">
                         <figcaption>Player movement C# script</figcaption>
                     </figure>
 
                     <figure class="artifact-card">
-                        <img src="img/nsiaf-inspector.png" alt="Screenshot of Unity Inspector setup">
+                        <img src="img/nsiaf-inspector.webp" alt="Screenshot of Unity Inspector setup">
                         <figcaption>Unity Inspector setup</figcaption>
                     </figure>
                 </div>
@@ -211,19 +231,19 @@
                 <h4 class="artifact-label">Early Level Sketches &amp; Notes</h4>
                 <div class="artifact-grid">
                     <figure class="artifact-card artifact-script">
-                        <img src="img/nsiaf-sketch-1.png" alt="Early level layout sketch for Not Seeing Is A Flower">
+                        <img src="img/nsiaf-sketch-1.webp" alt="Early level layout sketch for Not Seeing Is A Flower">
                         <figcaption>Early level layout sketch</figcaption>
                     </figure>
 
                     <figure class="artifact-card artifact-script">
-                        <img src="img/nsiaf-notes.png" alt="Team task updates and planning notes for the project">
+                        <img src="img/nsiaf-notes.webp" alt="Team task updates and planning notes for the project">
                         <figcaption>Team task updates / planning notes</figcaption>
                     </figure>
                 </div>
 
                 <h4 class="artifact-label">Title Screen Art</h4>
                 <figure class="artifact-full artifact-card">
-                    <img src="img/nsiaf-titleart.png" alt="Title screen illustration for Not Seeing Is A Flower">
+                    <img src="img/nsiaf-titleart.webp" alt="Title screen illustration for Not Seeing Is A Flower">
                     <figcaption>Title screen illustration contributed by Mark</figcaption>
                 </figure>
 
